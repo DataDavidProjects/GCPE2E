@@ -2,33 +2,31 @@ import os
 from kfp import dsl
 from kfp import compiler
 
-from utils.config import pipeline_config,vertex_authenticate
+from utils.config import vertex_authenticate
 
 # Import components
 
 
-
 # Authenticate with Google Cloud SDK for Vertex AI
-aiplatform_client = vertex_authenticate(pipeline_config)
+aiplatform_client = vertex_authenticate()
 
 # Define the pipeline
-PIPELINE_NAME = os.path.basename(__file__).split('.')[0]
+PIPELINE_NAME = os.path.basename(__file__).split(".")[0]
 
 
 # Define pipeline arguments for components
-pipeline_args = {
-    
-}
+pipeline_args = {}
 
 
 @dsl.pipeline(
-    pipeline_root=pipeline_config["pipeline_root"],
+    pipeline_root=f"gs://{os.environ.get('BUCKET_NAME')}/{PIPELINE_NAME}/run/",
     name=PIPELINE_NAME,
-    description="Custom Pipeline for MLOps",
+    description=f"Pipeline on Vertex AI for {PIPELINE_NAME}",
 )
 def pipeline():
     # Define pipeline steps
     pass
+
 
 # Compile the pipeline
 compiler.Compiler().compile(

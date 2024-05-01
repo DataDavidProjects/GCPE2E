@@ -13,7 +13,7 @@ project_config = {
     "region": os.environ.get("REGION"),
     "service_account": os.environ.get("SERVICE_ACCOUNT"),
     "bucket_name": os.environ.get("BUCKET_NAME"),
-    # Suggestion: match directory names with pipeline names in pipelines directory
+    # Note: match directory names with pipeline names in pipelines directory
     "directories": ["training", "deployment"],
 }
 

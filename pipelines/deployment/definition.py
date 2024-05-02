@@ -14,8 +14,10 @@ aiplatform_client = vertex_authenticate()
 PIPELINE_NAME = os.path.basename(__file__).split(".")[0]
 
 
-# Define pipeline arguments for components
-pipeline_args = {}
+# Define pipeline arguments for components configs
+pipeline_args = {
+    # Component Configs
+}
 
 
 @dsl.pipeline(
@@ -24,7 +26,7 @@ pipeline_args = {}
     description=f"Pipeline on Vertex AI for {PIPELINE_NAME}",
 )
 def pipeline():
-    # Define pipeline steps
+    # Define pipeline steps using components
     pass
 
 

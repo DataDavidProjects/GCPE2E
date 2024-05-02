@@ -1,6 +1,6 @@
 import os
-from kfp import dsl
-from kfp import compiler
+
+from kfp import compiler, dsl
 
 from utils.config import vertex_authenticate
 

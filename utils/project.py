@@ -1,7 +1,7 @@
 import os
 from dataclasses import dataclass
-from google.cloud import storage
-from google.cloud import artifactregistry
+
+from google.cloud import artifactregistry, storage
 
 
 @dataclass

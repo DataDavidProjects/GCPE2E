@@ -1,8 +1,8 @@
 import os
-from dotenv import load_dotenv, find_dotenv
-from google.auth import exceptions, default
-from google.cloud import aiplatform
 
+from dotenv import find_dotenv, load_dotenv
+from google.auth import default, exceptions
+from google.cloud import aiplatform
 
 load_dotenv(find_dotenv())
 

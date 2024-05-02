@@ -1,8 +1,9 @@
 import os
-from dotenv import load_dotenv, find_dotenv
-from google.cloud import storage, artifactregistry
-from utils.project import CloudStorageConfig, ArtifactRegistryConfig
 
+from dotenv import find_dotenv, load_dotenv
+from google.cloud import artifactregistry, storage
+
+from utils.project import ArtifactRegistryConfig, CloudStorageConfig
 
 # Set up Project
 load_dotenv(find_dotenv())

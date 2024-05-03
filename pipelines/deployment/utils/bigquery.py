@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 import pandas as pd
-import numpy as np
 from google.cloud import bigquery
 from typing import List
 from pathlib import Path

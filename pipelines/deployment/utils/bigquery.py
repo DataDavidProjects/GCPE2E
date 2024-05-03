@@ -31,7 +31,7 @@ class BigQueryExternalTable:
     """
 
     def __init__(self, project_id: str):
-        self.client = bigquery.Client(project=project_id)
+        self.client: bigquery.Client = bigquery.Client(project=project_id)
 
     def create_external_table(
         self,

@@ -177,7 +177,8 @@ class ProjectConfig:
                            containerregistry.googleapis.com  \
                            aiplatform.googleapis.com  \
                            cloudbuild.googleapis.com \
-                           cloudfunctions.googleapis.com
+                           cloudfunctions.googleapis.com \
+                           bigquery.googleapis.com
         """
         print(f"\nRunning Command:\n{cmd}\n")
         exit_code = os.system(cmd)

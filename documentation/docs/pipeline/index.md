@@ -2,6 +2,26 @@
 
 A LazyPipeline is a pipeline that follows specific conventions and allows users to move their source code to a VertexAI pipeline in less time as possible and with full control of business logic.
 
+1. Naming conventions for files and directories
+2. Components
+3. Pipelines
+
+## Naming conventions for files and directories
+
+In order to eliminate the majority of the boilerplate work, some naming convention are introduced.
+Inside each folder type:
+
+1. Pipeline
+2. Components
+
+There following files are mandatory:
+
+1. `definition.py`
+2. `Dockerfile`
+3. `run.py`
+4. `setup.py`
+5. `src`
+
 ## Pipelines
 
 A pipeline is named after the name of its directory in the `pipelines` directory.

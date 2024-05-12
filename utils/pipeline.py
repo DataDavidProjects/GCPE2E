@@ -72,7 +72,7 @@ class LazyPipe:
         # Initialize Artifact Registry Client
         self.artifactregistry_client = artifactregistry.ArtifactRegistryClient()
         # Initialize Project Config
-        self.project_config = ProjectConfig(config=self.project_config)
+        self._project_config = ProjectConfig(config=self.project_config)
         # Initialize Artifact Registry Config
         self.artifactregistry_config = ArtifactRegistryConfig(
             client=self.artifactregistry_client, config=self.project_config
@@ -92,7 +92,7 @@ class LazyPipe:
         """
 
         # Enable APIs
-        self.project_config.enable_apis()
+        self._project_config.enable_apis()
 
     def set_up_storage(self):
         """
